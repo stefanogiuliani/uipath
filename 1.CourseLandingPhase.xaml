@@ -1,0 +1,138 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CourseLandingPhase" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_dtCourses" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_browser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1059.2,1076.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>BlankProcess11</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>DataService.BlankProcess11</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="475.2,1012" sap2010:WorkflowViewState.IdRef="Sequence_21">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="433.6,919.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,701.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DelayBefore="3" DisplayName="Click 'Courses'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://academy.uipath.com/internal/filter-learning-paths/Mw%3D%3D?contenttype=learningpath" DesignTimeRectangle="758, 150, 87, 21" ElementType="Text" FriendlyName="'Courses'" FullSelectorArgument="&lt;webctrl aaname='Courses' parentid='topMenu' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Courses' parentid='topMenu' tag='SPAN' type='' check:text='Courses' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAZCAYAAABeplL+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAT3SURBVGhD7Vgxa+NIFL7/5EqFwRAwbOHKamIIxKRJswbDmcCaFLscBC0Ek8KkCD4I4QoRWJQi6ODIwoEXgq4wXggoELwQUBEwBAQpBIbv3kgj6WksJfHFZ+7AH7zmzejN6Htv3nszP2GNlWFN9gqxJnuFWJO9QqzJXiHWZK8Qz5P95MN/jCSYSd1LmAXJN/6T1P0XEPyDf3ktXslTLtn+rQVju4JSqcSkguaBBdeXk1TMpnBOWqiW+TclVLa7OPtrKicxjHpyTg9jqcrgwUIrHG/BelB1qmio7hSsM3UwaFehKfMbv6j/MoX1ns/JkaPsToO7fJ52TxxMc0ifI9u77KDCPq7UG9A3mLE6kaNG7NMY/U0tnVOuolHnm9DQPJ/IyRJvIpvI3WygsUXyjq1L+taFJycTHmy0YueLPYn5W3r6f5l/ScnW3knbqpymOw2+96HHdjb0aHwzdarWtuAphGfJvjfRlJP1j1nP+7cmOpJ07cMV0qEAwwP5w+Um+tcsuijah4cNuQEd/e+BHCC8iWymExDrfNYje2UDjlzGPalFuu0BXB4gvoNeTdgpkXPi/aZkp7oi+LD3ornavp2NYuIwDojeSOokGNkBnM+StG0Tk5xjEBBBtdBQC3a8n8RBGoxvjMwEPq4+SLt7duqkZZIt4FnYDcdqGNwKRUqe/ptyqgje1z76xyRf45OwCNlj9MK1Svj0p/rPPsbnkW1zlM25jGxKBfLIdX7PTkpAEeReO3BIJo+RanrZCr8p1Sh6iooDERtFdxdXsellk52MaXSChIIFT93A0MsLBI5FyPZgbkdztbYJV3LxElKyk802YP6QuldgfBQtWjoY0u8VILEdRx1hyWR759Lp3KEU7UnOJqnUOzBOLTg/pjldQ0p2rW1EUZ8RE2MWg+KUJzlb1BAq0L1zG+59sVNzyM6JmmeQkK1U6gxmDgy5sSSPvYlsViCFsCKpH4+zTqdu5Gy/mSn6oWzsYpDpXlKy82Wel+DORm+u06Fo3/wE626e9P9pZOeJjk8XLvyiVEb9v3czhHXcRTPprnjRTsluHNphqszKGIWZKJhiMrJhHrDWt0x1TXHOSnJ28M2I5iwtZ+/CvJUXidFAHucanZpCd2cx82C15WlIOqtFcvYzoDa4V4/s1H51pTICIzugKJWtUj2fOEHaXKFLCNDQ/SPHSeLH4uPJu5HbgexsKNpvpI7h+bX4kWatJ++iplcwwjTTgXUvdQzel93om/cW0SywANk3Z2iGtvtJm8nhHEZ21NTKyCawS4C2Q4bicyOO4HUfTTlWIyPpGuSkY9njqkf50YX1MR1LUojAzMVARoDaLfg31KvG++A9fS7ZBNZ+pg6fwNySNtQLxsMQhlxbSwhZgOyAvg/Xoxpx5GRSl7iPxHtX7WTJJmSr7LxoO8oFQYCi195Tr61cKuhcspudRDDqoyE3liuU9yz+WRHZ/FTWKC1Jv811DKKo8pttJq++VCBJWKR6Fy1WGCvQlUJdqveTfcSYIzvEg4PBz+xaK2Sjie5p/p0/xMyHe2GgqVyfq+0ebMqvhchbq+gdppBswuMVunFEfUk9FL7z7KgdA9nfP4OTCbzFyBaYXg/QyTxLkJSraB3ZmOQ8wuWTzRCIIuQrLnoJ8oVtodc19lq49Fc5gX/TfvKi+DxPL5K9xvKwJnuFWJO9QqzJXhmAvwGT9S7Nkoto7QAAAABJRU5ErkJggg==" InformativeScreenshot="0649c9854c4dfb49a5765c27aa83f521.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath Employee Academy' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Sequence DisplayName="Load all the page Sequence" sap:VirtualizedContainerService.HintSize="333.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="333.6,166.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(end)][u(ctrl)][u(hk)][d(hk)][d(ctrl)][k(home)][u(ctrl)][u(hk)]" />
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            </Sequence>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_dtCourses]" DisplayName="get all the courses information" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Status'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Course Name'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Timing'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Type'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='cr-content-grid' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='cr-content-grid' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='cr-content-grid' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='h4' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='cr-content-grid' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='alt'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='cr-content-grid' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="0">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="488, 456, 1396, 2070" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;content-raven&amp;gt;section&amp;gt;cr-advance-search&amp;gt;cr-search-content&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;cr-advance-search-tag&amp;gt;cr-advance-search-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" InformativeScreenshot="ab921b19c10b40441f8536d222729058.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='UiPath Employee Academy' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

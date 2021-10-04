@@ -1,0 +1,308 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_3_3_Agenda" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:b="clr-namespace:BlankProcess11;assembly=DataService.BlankProcess11" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_courseInformation" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="out_bNewWithNoItem" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="in_courseName" Type="InArgument(x:String)" />
+    <x:Property Name="in_courseStatus" Type="InArgument(x:String)" />
+    <x:Property Name="in_courseTiming" Type="InArgument(x:String)" />
+    <x:Property Name="inout_CourseAgendaList" Type="InOutArgument(scg:List(b:AcademyCoursesAgendas))" />
+    <x:Property Name="in_productCovered" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1339.2,2133.6</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>BlankProcess11</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>DataService.BlankProcess11</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="953.6,2068.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="splitter1">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">At the end of this course</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="splitter2">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">should be able to:</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[in_courseInformation(0).ToString.Contains(splitter1) and in_courseInformation(0).ToString.Contains(splitter2)]" DisplayName="Agenda" sap:VirtualizedContainerService.HintSize="912,1976" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence DisplayName="if agenda (topic) exists" sap:VirtualizedContainerService.HintSize="876.8,1796.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="scg:List(x:String)" Name="topicList" />
+            <Variable x:TypeArguments="x:String" Name="topics" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="835.2,130.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[topics]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[trim(Split(trim(Split(in_courseInformation(0).ToString,splitter2)(1)), "Agenda")(0))]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">[topicList]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">[Split(topics, CChar(vblf)).ToList]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <Assign sap:VirtualizedContainerService.HintSize="835.2,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Boolean">[out_bNewWithNoItem]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="for each topic in the agenda" sap:VirtualizedContainerService.HintSize="835.2,1433.6" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[topicList]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:String">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="800,1299.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[not trim(item).Equals(&quot;&quot;) and trim(item).Length&gt;1]" sap:VirtualizedContainerService.HintSize="758.4,1206.4" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="723.2,1027.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="scg:IList(b:AcademyCoursesAgendas)" Name="queryResult1" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uda:QueryEntityRecords x:TypeArguments="b:AcademyCoursesAgendas" TotalRecords="{x:Null}" ContinueOnError="False" DisplayName="Query Entity Records" ExpansionDepth="2" sap:VirtualizedContainerService.HintSize="681.6,224.8" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" OutputRecords="[queryResult1]" Skip="0" SortAscending="True" SortByField="Id" TimeoutInMs="30000" Top="100">
+                          <uda:QueryEntityRecords.FilterArguments>
+                            <uda:FilterArgument FilterActivityType="b:AcademyCoursesAgendas">
+                              <uda:FilterArgument.Filter>
+                                <uda:GroupFilter Operator="and">
+                                  <uda:GroupFilter.Filters>
+                                    <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
+                                      <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="AgendaTopic" FieldType="System.String" Operator="=" ValueIndex="0" />
+                                      <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="CourseName" FieldType="System.String" Operator="=" ValueIndex="1" />
+                                    </scg:List>
+                                  </uda:GroupFilter.Filters>
+                                  <uda:GroupFilter.Groups>
+                                    <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                                  </uda:GroupFilter.Groups>
+                                </uda:GroupFilter>
+                              </uda:FilterArgument.Filter>
+                            </uda:FilterArgument>
+                          </uda:QueryEntityRecords.FilterArguments>
+                          <uda:QueryEntityRecords.FilterValues>
+                            <scg:List x:TypeArguments="InArgument" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[item]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[in_courseName]</InArgument>
+                            </scg:List>
+                          </uda:QueryEntityRecords.FilterValues>
+                        </uda:QueryEntityRecords>
+                        <If Condition="[queryResult1.Count = 0]" DisplayName="check if this row exists in table" sap:VirtualizedContainerService.HintSize="681.6,669.6" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If.Then>
+                            <Sequence DisplayName="if Sequence" sap:VirtualizedContainerService.HintSize="375.2,510.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="b:AcademyCoursesAgendas" Default="[new AcademyCoursesAgendas]" Name="CourseAgenda" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="333.6,255.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                                <ui:MultipleAssign.AssignOperations>
+                                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.AgendaTopic]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">[trim(item)]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.CourseName]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">[in_courseName]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.CourseStatus]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">[in_courseStatus]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.CourseTime]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">[in_courseTiming]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.Product]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">[in_productCovered]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">[CourseAgenda.InformationType]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">Learning Objectives</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                  </scg:List>
+                                </ui:MultipleAssign.AssignOperations>
+                              </ui:MultipleAssign>
+                              <AddToCollection x:TypeArguments="b:AcademyCoursesAgendas" Collection="[inout_CourseAgendaList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" Item="[CourseAgenda]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[out_bNewWithNoItem]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">[out_bNewWithNoItem]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">[False or out_bNewWithNoItem]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEach>
+        </Sequence>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>

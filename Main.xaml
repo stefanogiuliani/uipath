@@ -1,0 +1,240 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1339.2,1969.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:b="clr-namespace:BlankProcess11;assembly=DataService.BlankProcess11" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="43">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Microsoft.Activities.Extensions.Statements</x:String>
+      <x:String>BlankProcess11</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>System.Runtime.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities.Extensions</AssemblyReference>
+      <AssemblyReference>DataService.BlankProcess11</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="main sequence" sap:VirtualizedContainerService.HintSize="675.2,1904.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtCourses" />
+      <Variable x:TypeArguments="scg:List(b:AcademyCoursesAgendas)" Default="[New List(Of AcademyCoursesAgendas)]" Name="CourseAgendaList" />
+      <Variable x:TypeArguments="ui:UiElement" Name="browser" />
+      <Variable x:TypeArguments="x:String" Default="https://academy.uipath.com/internal/filter-learning-paths/Mw%3D%3D?contenttype=learningpath" Name="path" />
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String)]" Name="wrongCoursesList" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="browse tha landing page" sap:VirtualizedContainerService.HintSize="633.6,1812" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="browse the courses and collect the main info" sap:VirtualizedContainerService.HintSize="600,1595.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
+              <Variable x:TypeArguments="x:Boolean" Name="bCountinue" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CourseLandingPhase workflow" sap:VirtualizedContainerService.HintSize="558.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="1.CourseLandingPhase.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtCourses">[dtCourses]</OutArgument>
+                <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">[browser]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtCourses]" DisplayName="deep dive each course" sap:VirtualizedContainerService.HintSize="558.4,1193.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="524.8,1071.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataTable" Name="dtCourseInformation" />
+                      <Variable x:TypeArguments="x:String" Name="courseName" />
+                      <Variable x:TypeArguments="x:String" Name="courseTiming" />
+                      <Variable x:TypeArguments="x:String" Name="courseStatus" />
+                      <Variable x:TypeArguments="x:String" Name="wrongCourseName">
+                        <Variable.Default>
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SurfingTheCourse workflow" sap:VirtualizedContainerService.HintSize="483.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="2.SurfingTheCourse.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtCourseInformation">
+                          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtCourseInformation" />
+                        </OutArgument>
+                        <InOutArgument x:TypeArguments="x:String" x:Key="out_courseName">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="courseName" />
+                        </InOutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_courseTiming">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="courseTiming" />
+                        </OutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_courseStatus">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="courseStatus" />
+                        </OutArgument>
+                        <OutArgument x:TypeArguments="x:Boolean" x:Key="out_continue">
+                          <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="bCountinue" />
+                        </OutArgument>
+                        <InArgument x:TypeArguments="ui:UiElement" x:Key="in_browser">
+                          <mva:VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="browser" />
+                        </InArgument>
+                        <InOutArgument x:TypeArguments="x:Int32" x:Key="inout_counter">
+                          <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
+                        </InOutArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_courseNameWrong">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="wrongCourseName" />
+                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_CourseName">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(3).ToString" />
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <If Condition="[wrongCourseName.Length&gt;2]" DisplayName="check the possible course name mess" sap:VirtualizedContainerService.HintSize="483.2,240.8" sap2010:WorkflowViewState.IdRef="If_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <AddToCollection x:TypeArguments="x:String" Collection="[wrongCoursesList]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[wrongCourseName]" />
+                      </If.Then>
+                    </If>
+                    <If Condition="[bCountinue]" sap:VirtualizedContainerService.HintSize="483.2,542.4" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,361.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 3.extraInfoExtraction workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="3.ExtraInfoExtraction.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="courseName">[courseName]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="courseStatus">[courseStatus]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="courseTiming">[courseTiming]</InArgument>
+                              <OutArgument x:TypeArguments="scg:List(b:AcademyCoursesAgendas)" x:Key="CourseAgendaList">[CourseAgendaList]</OutArgument>
+                              <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtCourseInformation">[dtCourseInformation]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 4.DbAndFinishingActivities workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="4.DbAndFinishingActivities.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="scg:List(b:AcademyCoursesAgendas)" x:Key="in_CourseAgendaList">[CourseAgendaList]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 5.LogTheWrongCourses workflow" sap:VirtualizedContainerService.HintSize="558.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="5.LogTheWrongCourses.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="wrongCoursesList">[wrongCoursesList]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1931, -11, 1942, 1102" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOASURBVFhH7djXTuNAFAZgHmkfcFeik0oK6Z36QEhcICEFCbEQEggCLSkOOTv/eMYlHm88Y3avdqRfLijMx3E8hY3/7W+1i4sLOj8/p7OzM57T01M6OUFO6Pj4mHpIr0fdbo863S51Oh1qI+02tVptarZa1Gw2qcFSbzSoXm9Qq90e53K5b6KLeA24z8/P0Cy8WYg45wvPcUHL5ZLwB/dvbxm69TVIVA0Qy7J45jJzO7P5XISdz9gRYddTfj7jxyk/zjgSwLe3N+r3+6yizfhIG7iMCbSREvj+/k7j8Zhubm6oVq/HQ+I7F6igwJlW8PX1lV5eXmg4HNL19TVVqjVzJF4ICVytXhjQqdpUDXx+fqbRaERPT0/08PBAV1dXVK5UzJB4WwFU4eYOTg8I2GAw4Lj7+3u6u7ujy8tLKpfLY9Ft9IahhAN9MDsqHK6B4tAQYCaTUSZfKJDoNnrDOKcCujhEBZQ4AQSWZYDH+siqx/PIqvhIP1mGwxHl8iZANgj7gRIlE8TxiOpN+NEF4trNlCaTKX2wWNaCAfP6QMwQGHj9KBkPTsJ4bJx7rsLZQOAk8DBnAMT0FQTiEftxuA8Qh7LOV3F/qp4EZg9zBkA2r9pAgQqBBXF+oB8XBjzUB2Lix3zqQ8lExK2rngRmsiZAtirxAcVjdiFBHBDhuHBgOpvVB2LJJL+DXhRiowVE3DPBOcCMARDrOVRQiULEfTu4dn8WxCHhwFQ6YwBkC03MAA4I8aE8VTPE2UCLkum0PhArYW8FlaiYOATzfDJlAMQynVdwFeMNA8TBfXxMODCRShkA2R5CCWQdr4ch63G/BPAgaQBkK97gd9ATNUpmDY4FOAeYSOoDq7WaA1QjVGEwDZwE7icSBsBqjSwGVENW48LW4eSj9QEPDICVajUCUAOGrOAkcG//QB9YrqiAAuRBRYJNgjAZAHfNgBUBDIKioUQUKG84cG9fH1gql/k0pOw0ahSg1QC4YwQsxQAqIGEBcHt3Tx94VCrpAxWAdeHAnV19YPEoKnBiBJMBcMsMeBQCtEFxUN4AuLm9ow8sFAG0vgwSFmNgvljkH1b90q8M+vixtW0ALBT4h/9Fvm9u6QPx7wjs+LGpxr4VW0PsvrDBwR4Cy3SshLHYxHoOSyasSjDxY27F9IUZAoMwxjkMJXhb8ULgkSKoHHBGwP8tUtvY+A3VxXpRUoraswAAAABJRU5ErkJggg==" InformativeScreenshot="eabb53daae8f99ddc29b9830697842be.png" Selector="&lt;html app='msedge.exe' title='UiPath Employee Academy'/&gt;" Url="[path]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
